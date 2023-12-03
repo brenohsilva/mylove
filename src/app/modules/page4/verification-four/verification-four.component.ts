@@ -15,7 +15,7 @@ export class VerificationFourComponent implements OnInit {
 
 
   onKeyDown(event: any, index: number): void {
-    const input = event.key.toUpperCase(); // Converte a tecla pressionada para maiúscula
+    const input = event.key.toUpperCase(); 
 
     if (/^[A-Z]$/.test(input)) {
       this.codes[index] = input;
@@ -39,7 +39,7 @@ export class VerificationFourComponent implements OnInit {
 
   verificar(): void {
     const codigoDigitado = this.codes.join('');
-    const codigoCorreto = 'NENUCO'; 
+    const codigoCorreto = 'CAMYLA'; 
 
     if (codigoDigitado === codigoCorreto) {
       console.log('Código correto!');
