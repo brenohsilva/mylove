@@ -1,0 +1,44 @@
+<section>
+    <div
+      class="flex flex-col items-center h-full bg-[url('\src\assets\letter.png')] p-1"
+    >
+      <p *ngIf="!translate" class="text-black p-4">
+        Zehn Tage, oder besser noch, 240 Stunden, oder noch besser, 14.400 Minuten
+        später, nachdem wir das neue Jahr damit verbracht hatten, ganz an dich zu
+        denken und das Jahr mit der Frage begonnen hatten, ob wir wieder ausgehen
+        würden, kam es endlich zu unserem ersten Kuss, dem Ersten, einfach so
+        Unser erstes Date hätte früher stattfinden können (oder einen Tag später,
+        richtig, um Dates mit uns neunen zu machen, süß), aber obwohl es einfach
+        war, war es so natürlich, dass es für mich zu einem unserer besten Küsse
+        wurde (nur wegen verlieren). die im Deluxe natürlich), nachdem wir den
+        ganzen Nachmittag damit verbracht hatten, auf deinen Mund zu starren, dir
+        zuzuhören, alle Zeichen auf deinem Gesicht zu zählen und nur auf ein
+        Zeichen zu warten, um dich zu küssen, kam endlich unser kleiner Kuss
+        heraus, der erste von viele und das wird mir für immer in Erinnerung
+        bleiben
+      </p>
+      <p *ngIf="translate" class="text-black p-4 text-xs font-normal">
+        Dez dias, ou melhor, 240 horas, ou ainda melhor, 14.400 minutos depois,
+        depois de passar uma virada do ano pensando completamente em você e
+        começar o ano me perguntando se a gente iria sair de novo, enfim aconteceu
+        o nosso primeiro beijo, o primeiro que assim como o nosso primeiro
+        encontro poderia ter saído mais cedo (ou um dia mais tarde né, pra ficar
+        bonitinho as datas com os 9) porém apesar de simples, foi tao natural que
+        para mim se tornou um dos nossos melhores beijos(perdendo apenas para os
+        do delux claro), após passar a tarde toda encarando a sua boca enquanto
+        ouvia voce falar, de contar todos os seus sinais no rosto e de esperar
+        apenas um sinal para te beijar, finalmente o nosso beijinho saiu, o
+        primeiro de muitos e que vai ficar guardado pra sempre na minha memoria.
+      </p>
+      <div>
+        <button
+          *ngIf="!translate"
+          class="text-xs text-white bg-pink-400 p-2 mt-1 mb-2 rounded"
+          (click)="openDialog()"
+        >
+          Traduzir
+        </button>
+      </div>
+    </div>
+  </section>
+  

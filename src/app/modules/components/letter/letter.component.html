@@ -1,0 +1,55 @@
+<section >
+  <div
+    class=" flex flex-col items-center h-full bg-[url('\src\assets\letter.png')] p-1"
+  >
+    <p *ngIf="!translate" class="text-black p-4">
+      مرحباً يا طفلي، إذا كنت تقرأ هذه الرسالة، فهذا يعني أن شيئاً ما يحدث، شيء
+      كنت أحلم به وأتخيله منذ أشهر يحدث والآن حان الوقت لتحقيق ذلك... ولكن أولاً
+      أردت أن أتحدث القليل عن كيف وصلنا إلى ما وصلنا إليه، توقف هنا، لم أستطع أن
+      أتخيل أن عام 2023 الخاص بي سيكون جيدًا كما كان/ما زال، وأنت المسؤول عن ذلك
+      بنسبة 90٪ على الأقل. من كان يظن أن إعجابًا بسيطًا بقصتك النادرة للغاية كان
+      سيوصلني إلى هذا الحد، من كان يظن أن ردًا بسيطًا على قصتي كان سيوصلنا إلى
+      ما نحن فيه، نبني ما بنيناه حتى الآن، هناك كانت عدة "صدف" أشكر الله كل يوم
+      على حدوثها. ما زلت أتذكر عدة تفاصيل من ذلك اليوم التاسع من ديسمبر، بدءًا
+      من هزيمة البرازيل وحتى أفضل رسالة يمكن أن أتلقاها في ذلك اليوم،
+      "kkkkkkkkkk أنا في هذا أيضًا" أتذكر أنه منذ الرسالة الأولى جرت محادثتنا
+      بسلاسة وطبيعية لدرجة أنها بدت وكأنها وكأنني أعرفك منذ زمن طويل، بالصدفة
+      بدأت رسائلنا الأولى بـ "ككككككككك"، وهو ما يلخص علاقتنا حتى الآن، فرح
+      وسعادة، كلما كنت معك أشعر وكأنني أسعد شخص في العالم و أفضل شيء بالنسبة لي
+      هو أن أجعلك تبتسم، الكثير من الابتسامات هناك وأنت تريد ابتسامتي، الكثير من
+      النظرات تنظر إلي وأنا أريد ابتسامتك، كم هو محظوظ بالنسبة لنا، صحيح، في
+      الواقع كم هو محظوظ بالنسبة لي للحصول على المتعة وجودك بجانبي من ناحية
+      أخرى، لم أكن أعلم ذلك في ذلك الوقت، ولكن انتهى يوم التاسع من ديسمبر ليصبح
+      واحدًا من أفضل أيام حياتي وكان أسفي الوحيد هو عدم البدء به مبكرًا...
+    </p>
+    <p *ngIf="translate" class="text-black p-4 text-xs font-normal">
+      Olá minha bebê, se você está lendo essa carta, significa que estar
+      acontecendo, estar acontecendo algo que eu venho sonhado e imaginado a
+      meses e que agora chegou a hora de realizar... Mas antes eu queria falar
+      um pouco sobre como a gente veio parar aqui, eu nao poderia imaginar que o
+      meu 2023 seria tao bom quanto foi/está sendo e você tem no minimo 90% de
+      culpa disso. Quem diria que uma simples curtida em um story extremamente
+      raro seu me faria chegar até aqui, quem diria que uma simples resposta no
+      meu story faria a gente está onde está, construir o que a gente construiu
+      até aqui, foram varias "coincidências" que eu agradeço a Deus todos os
+      dias por terem acontecido. Eu ainda lembro de varios detalhes daquele 9 de
+      dezembro, desde a derrota do Brasil até a melhor mensagem que eu poderia
+      receber naquele dia, o "kkkkkkkkkkkkk também tô nessa" eu lembro que desde
+      a primeira mensagem a nossa conversa fluiu tão beem e natural que parecia
+      que eu te conhecia a muito tempo, coincidentemente as nossas primeiras
+      mensagens começaram com "kkkkkkkkk", que é o que resume o nosso
+      relacionamento ate aqui, alegria e felicidade, sempre que to com você eu
+      me sinto a pessoa mais feliz do mundo e a melhor coisa pra mim é te fazer
+      sorrir, tantos sorrisos por aí e você querendo o meu, tantos olhares me
+      olhando e eu querendo o seu, que sorte nossa né, na verdade que sorte a
+      minha por ter o prazer de ter você ao meu lado, eu ainda nao sabia na
+      epoca, mas dia 9 de dezembro acabou virando um dos melhores dias da minha
+      vida e o meu unico arrependimento foi nao ter começado isso antes....
+    </p>
+    <div>
+      <button *ngIf="!translate" class="text-xs text-black bg-orange-300 p-2 mt-1 mb-2 rounded" (click)="openDialog()">
+        Traduzir
+      </button>
+    </div>
+  </div>
+</section>

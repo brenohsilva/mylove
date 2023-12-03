@@ -1,0 +1,63 @@
+<section>
+  <div
+    class="flex flex-col items-center h-full bg-[url('\src\assets\letter.png')] p-1"
+  >
+    <p *ngIf="!translate" class="text-black p-4">
+      Μερικές φορές πιάνω τον εαυτό μου να σκέφτεται πώς χτίστηκε η σχέση μας,
+      ήταν εντυπωσιακό το πόσο καλά τα πήγαμε αμέσως, πώς οι συζητήσεις μας
+      εξελίσσονταν με τόσο φυσικό και ήρεμο τρόπο, μιλώντας κυρίως για τα
+      πρωτότυπα, The Vampire Diaries, για πράγματα που πίστευα. Δεν θα μιλούσα
+      ποτέ για καμία κοπέλα χαχαχα, ομολογώ επίσης ότι νόμιζα ότι η κουβέντα μας
+      κάποια στιγμή θα τελείωνε και δεν θα ξαναμιλούσαμε, ειδικά τις στιγμές που
+      διέγραφες και εξαφανιζόσουν από το πουθενά χαχαχα, αλλά αντί να ότι ήμουν
+      πάλευα τον ύπνο για να μπορέσω να σου μιλήσω για λίγο ακόμα, προσπαθούσα
+      να φύγω νωρίς για να πάω στο γυμναστήριο και να προσπαθήσω να σε δω...
+      Ήταν περίπου 1 μήνας συζητήσεων που έμοιαζαν σαν χρόνια , ήταν και είναι
+      πολύ καλό να σου μιλάω όλη μέρα. Μέχρι που επιτέλους έγινε η πολυπόθητη
+      μέρα, η πρώτη μας συνάντηση... Και τι αγωνία ήταν να βγούμε έξω, ξέρεις, η
+      βροχή ερχόταν και έφευγε, και η ώρα περνούσε πολύ γρήγορα, η μέρα έφευγε,
+      δεν ήξερα ακόμα πόσο περίπλοκο ήταν να έρθεις πίσω αργά lol, αλλά
+      καταφέραμε να βγούμε έξω, ήμουν εντελώς νευρικός σαν το Αν ήταν η πρώτη
+      μου φορά και ήσασταν όλοι θαμποί αλλά εξαιρετικά όμορφοι, με ένα απλά
+      τέλειο χαμόγελο που με μάγεψε με την πρώτη ματιά και δεν μπορούμε να
+      ξεχάσουμε το brigadeirinho , που ήταν κυριολεκτικά την κατάλληλη στιγμή
+      και την κατάλληλη στιγμή, θα έπαιρνα εκείνη τη στιγμή ως σημάδι του Θεού,
+      ήταν Εκείνος που μου έλεγε: "γιος, είναι αυτή" Δεν θυμάμαι πολύ καλά τι
+      μιλήσαμε εκείνη τη μέρα, αλλά δεν θα ξεχάσω ποτέ πώς ένιωσα...
+    </p>
+    <p *ngIf="translate" class="text-black p-4 text-xs font-normal">
+      As vezes eu me pego pensando em como nosso o relacionamento foi se
+      construindo, foi impressionante como nos damos bem logo de cara, como
+      nossas conversas foram se desenvolvendo de uma forma tao natural e
+      tranquila falando principalmente sobre the originals, de diarios de um
+      vampiro, de coisas que eu achava que nunca falaria com alguma menina kkkk,
+      eu também confesso que eu achava que a nossa conversa em algum momento
+      terminaria e nunca mais nos falaríamos, principalmente nos momentos onde
+      voce apagava e sumia do nada kkkkk, porém ao inves disso estava eu lutando
+      contra o sono para poder ficar conversando mais um tempinho com você,
+      estava eu tentando largar cedo pra conseguir ir para academia para tentar
+      ver você... Foram mais ou menos 1 mes de conversas que pareciam anos, era
+      e ainda é muito bom ficar conversando todo o dia com você. Ate que
+      finalmente o tao esperado dia aconteceu, o nosso primeiro encontro... E
+      que luta foi para a gente conseguir sair né, a chuva indo e voltando, e o
+      tempo passando rapido demais, o dia indo embora, eu ainda nao sabia a
+      complicação que era pra vc voltar tarde kkk porém conseguimos sair, eu
+      completamente nervoso como se fosse a minha primeira vez e voce toda sem
+      graça porém extremamente linda, com um sorriso Simplesmente perfeito que
+      me encantou a primeira vista e nao podemos esquecer do brigadeirinho, que
+      foi literamente na hora certa e no momento certo, eu levo aquele momento
+      como um sinal de Deus, foi Ele falando para mim: "filho, é ela" Eu nao
+      lembro muito bem o que a gente conversou naquele dia, mas eu nunca vou
+      esquecer de como eu me sentir...
+    </p>
+    <div>
+      <button
+        *ngIf="!translate"
+        class="text-xs text-white bg-cyan-600 p-2 mt-1 mb-2 rounded"
+        (click)="openDialog()"
+      >
+        Traduzir
+      </button>
+    </div>
+  </div>
+</section>
