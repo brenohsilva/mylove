@@ -10,18 +10,40 @@ import { MatDialogRef } from '@angular/material/dialog';
 })
 export class VerificationInputComponent implements OnInit {
   ngOnInit(): void {
+    document.addEventListener('keydown', (event) => this.onGlobalKeyDown(event));
   }
+  
   constructor(private dialogRef: MatDialogRef<VerificationInputComponent>) {}
   codes: string[] = Array(8).fill(''); 
 
+  onGlobalKeyDown(event: KeyboardEvent): void {
+    const activeElement = document.activeElement;
+  
+    if (activeElement && activeElement.tagName === 'INPUT') {
+      const inputIndex = Number(activeElement.id.split('-')[1]);
+      this.onKeyDown(event, inputIndex);
+      event.preventDefault(); // Evita que o evento seja propagado e cause problemas
+    }
+  }
+  
+  onInput(event: any, index: number): void {
+    const inputValue = event.target.value.toUpperCase().charAt(0);
+  
+    if (/^[A-Z]$/.test(inputValue)) {
+      this.codes[index] = inputValue;
+      setTimeout(() => this.focusNextInput(index), 10);
+    } else if (event.inputType === 'deleteContentBackward') {
+      setTimeout(() => this.focusPreviousInput(index), 10);
+    }
+  }
   
   onKeyDown(event: any, index: number): void {
-    const input = event.target.value.toUpperCase(); // Converte a tecla pressionada para maiúscula
-
+    const input = event.key.toUpperCase();
+  
     if (/^[A-Z]$/.test(input)) {
       this.codes[index] = input;
       setTimeout(() => this.focusNextInput(index), 10);
-    } else if (event.inputType === 'deleteContentBackward') {
+    } else if (event.key === 'Backspace') {
       setTimeout(() => this.focusPreviousInput(index), 10);
     }
   }
