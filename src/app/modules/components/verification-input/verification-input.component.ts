@@ -34,7 +34,7 @@ export class VerificationInputComponent implements OnInit {
     if (/^[A-Z]$/.test(inputValue)) {
       this.codes[index] = inputValue;
       setTimeout(() => this.focusNextInput(index), 10);
-    } else if (event.inputType === 'deleteContentBackward') {
+    } else if (event.inputType === 'insertText') {
       setTimeout(() => this.focusPreviousInput(index), 10);
     }
   }
@@ -71,6 +71,7 @@ export class VerificationInputComponent implements OnInit {
       console.log('Código correto!');
       this.dialogRef.close();
     } else {
+      this.codes.fill('')
       alert("Ops meu bebê, você errou!")
       
     }
