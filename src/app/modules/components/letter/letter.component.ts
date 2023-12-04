@@ -18,7 +18,7 @@ export class LetterComponent implements OnInit {
 
   constructor(public dialog: MatDialog) {
     this.sound = new Howl({
-      src: ['../../assets/music1.m4a'],
+      src: ['../../assets/music2.m4a'],
       html5: true
     })
    }
