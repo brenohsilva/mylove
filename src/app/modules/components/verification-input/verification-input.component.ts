@@ -1,5 +1,5 @@
 // verification-input.component.ts
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 
 
@@ -25,7 +25,9 @@ export class VerificationInputComponent implements OnInit {
       event.preventDefault(); // Evita que o evento seja propagado e cause problemas
     }
   }
-  
+
+
+  @HostListener('input', ['$event'])
   onInput(event: any, index: number): void {
     const inputValue = event.target.value.toUpperCase().charAt(0);
   
