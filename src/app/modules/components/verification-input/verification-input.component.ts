@@ -14,14 +14,14 @@ export class VerificationInputComponent implements OnInit {
   constructor(private dialogRef: MatDialogRef<VerificationInputComponent>) {}
   codes: string[] = Array(8).fill(''); 
 
-
+  
   onKeyDown(event: any, index: number): void {
-    const input = event.key.toUpperCase(); // Converte a tecla pressionada para maiúscula
+    const input = event.target.value.toUpperCase(); // Converte a tecla pressionada para maiúscula
 
     if (/^[A-Z]$/.test(input)) {
       this.codes[index] = input;
       setTimeout(() => this.focusNextInput(index), 10);
-    } else if (event.key === 'Backspace') {
+    } else if (event.inputType === 'deleteContentBackward') {
       setTimeout(() => this.focusPreviousInput(index), 10);
     }
   }
@@ -40,6 +40,7 @@ export class VerificationInputComponent implements OnInit {
 
   verificar(): void {
     const codigoDigitado = this.codes.join('');
+    console.log(codigoDigitado)
     const codigoCorreto = 'ACADEMIA'; 
 
     if (codigoDigitado === codigoCorreto) {
