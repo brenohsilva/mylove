@@ -12,7 +12,7 @@ export class VerificationThreeComponent implements OnInit {
   }
   
   constructor(private dialogRef: MatDialogRef<VerificationThreeComponent>) {}
-  codes: string[] = Array(8).fill(''); 
+  codes: string[] = Array(6).fill(''); 
 
   onGlobalKeyDown(event: KeyboardEvent): void {
     const activeElement = document.activeElement;

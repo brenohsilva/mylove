@@ -6,7 +6,7 @@ import { GermanyComponent } from './modules/page3/germany/germany.component';
 import { CoreaComponent } from './modules/page4/corea/corea.component';
 
 const routes: Routes = [
-  { path: '', component: GreeceComponent },
+  { path: '', component: GermanyComponent },
   { path: 'meubebe', component: HomeComponent },
   { path: 'eu', component: GreeceComponent },
   { path: 'te', component: GermanyComponent },
