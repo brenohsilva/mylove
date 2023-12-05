@@ -12,7 +12,7 @@ export class VerificationFourComponent implements OnInit {
   }
   
   constructor(private dialogRef: MatDialogRef<VerificationFourComponent>) {}
-  codes: string[] = Array(8).fill(''); 
+  codes: string[] = Array(6).fill(''); 
 
   onGlobalKeyDown(event: KeyboardEvent): void {
     const activeElement = document.activeElement;
