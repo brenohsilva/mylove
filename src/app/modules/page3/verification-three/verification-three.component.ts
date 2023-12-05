@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
@@ -7,16 +7,39 @@ import { MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./verification-three.component.css']
 })
 export class VerificationThreeComponent implements OnInit {
-
   ngOnInit(): void {
+    document.addEventListener('keydown', (event) => this.onGlobalKeyDown(event));
   }
+  
   constructor(private dialogRef: MatDialogRef<VerificationThreeComponent>) {}
-  codes: string[] = Array(6).fill(''); 
+  codes: string[] = Array(8).fill(''); 
+
+  onGlobalKeyDown(event: KeyboardEvent): void {
+    const activeElement = document.activeElement;
+  
+    if (activeElement && activeElement.tagName === 'INPUT') {
+      const inputIndex = Number(activeElement.id.split('-')[1]);
+      this.onKeyDown(event, inputIndex);
+      event.preventDefault(); // Evita que o evento seja propagado e cause problemas
+    }
+  }
 
 
+  @HostListener('input', ['$event'])
+  onInput(event: any, index: number): void {
+    const inputValue = event.target.value.toUpperCase().charAt(0);
+  
+    if (/^[A-Z]$/.test(inputValue)) {
+      this.codes[index] = inputValue;
+      setTimeout(() => this.focusNextInput(index), 10);
+    } else if (event.inputType === 'insertText') {
+      setTimeout(() => this.focusPreviousInput(index), 10);
+    }
+  }
+  
   onKeyDown(event: any, index: number): void {
-    const input = event.key.toUpperCase(); // Converte a tecla pressionada para maiúscula
-
+    const input = event.key.toUpperCase();
+  
     if (/^[A-Z]$/.test(input)) {
       this.codes[index] = input;
       setTimeout(() => this.focusNextInput(index), 10);
@@ -45,6 +68,7 @@ export class VerificationThreeComponent implements OnInit {
       console.log('Código correto!');
       this.dialogRef.close();
     } else {
+      this.codes.fill('')
       alert("Ops meu bebê, você errou!")
       
     }

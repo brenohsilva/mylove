@@ -64,7 +64,6 @@ export class VerificationInputComponent implements OnInit {
 
   verificar(): void {
     const codigoDigitado = this.codes.join('');
-    alert(codigoDigitado)
     const codigoCorreto = 'ACADEMIA'; 
 
     if (codigoDigitado === codigoCorreto) {

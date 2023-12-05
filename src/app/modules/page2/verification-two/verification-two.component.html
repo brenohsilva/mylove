@@ -1,21 +1,26 @@
 <!-- otp-verification.component.html -->
 <div class="container">
-    <span class="text-black mt-1 text-xs">Primeiro acerte a palavra chave!</span>
-    <div class="code-container">
-      <input
-        *ngFor="let code of codes; let i = index"
-        type="text"
-        class="code"
-        placeholder="*"
-        maxlength="1"
-        required
-        [value]="code"
-        (keydown)="onKeyDown($event, i)"
-        [id]="'code-' + i"
-      />
-    </div>
-    <div>
-      <button class="text-xs bg-cyan-500 p-2 mt-1 mb-2 rounded" type="button" (click)="verificar()">Acertou?</button>
-    </div>
+  <span class="text-black mt-1 text-xs">Primeiro acerte a palavra chave!</span>
+  <div class="code-container">
+    <input
+      *ngFor="let code of codes; let i = index"
+      type="text"
+      class="code"
+      placeholder="*"
+      maxlength="1"
+      required
+      [value]="code"
+      (keydown)="onInput($event, i)"
+      [id]="'code-' + i"
+    />
   </div>
-  
+  <div>
+    <button
+      class="text-xs bg-cyan-500 p-2 mt-1 mb-2 rounded"
+      type="button"
+      (click)="verificar()"
+    >
+      Acertou?
+    </button>
+  </div>
+</div>
